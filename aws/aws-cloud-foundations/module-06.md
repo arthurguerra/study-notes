@@ -126,3 +126,80 @@ A **Key Pair** consists of a **public key** and a **private key**.
 It enables secure connections to an EC2 instance. 
 
 ![Elastic IP address use cases](images/elastic-ip-address.png)
+
+## EC2 Cost Optimization
+
+![Amazon EC2 Pricing Models](images/pricing-models.png)
+
+Benefits of each pricing model
+
+- **On demand instances** offer low cost and flexibility with no long term contract
+- **Spot Instances** provide large scale at discounted price
+- **Reserved Instances** are good for predictability and steady state compute needs
+- **Dedicated Hosts** are a good choice when you have licensing restrictions or need to meet compliance or regulatories requirements.
+
+![Use cases for each pricing model](images/pricing-options-use-cases.png)
+
+
+### The Four Pillars of Cost Optimization
+
+- **Right Size**: choose the right balance of instance types. 
+- **Increase Elasticity**: reduce the amount of idle service capacity by implementing elastic deployments with the use of automatic scalig to handle peak loads.
+- **Choose optimal pricing**: choose the best pricing option for your current usage patterns.
+- **Optimize storage choices**: reduce unsused storage and choose less expensive storage options.
+
+## AWS Container Services
+
+### Containers
+
+**Containers** are a method of **operating system virtualization**.
+
+Containers are smaller than Virtual Machines (VMs) and DO NOT contain an entire operating system. Instead, they SAHRE a vritualized operating system and run as resource isolated processes.
+
+### Docker
+**Docker** is a software platform that packages software, such as applications, into containers.
+
+Containers have everything that an application needs including: 
+- Libraries
+- System tools
+- Application code
+- Runtime libraries
+
+#### Container vs Virtual Machine 
+A key difference between Containers and Virtual Machine is that VMs run directly on a hypervisor while containers run on any operating systems that have the appropriate kernel features to support docker host software.
+
+![Two examples comparing container vs virtual machine implementations.](images/container-vs-virtual-machine.png)
+
+### Amazon Elastic Container Service (ECS)
+**Amazon ECS** is a highly scalable and fast **container management service**.
+
+![Amazon ECS definition](images/ecs.png)
+
+A **task definition** is a **blueprint** to prepare your application.
+
+Task definitions specifies details such as wich containers should be deploy to execute the task.
+
+When creating a Amazon ECS cluster, we have three options:
+- **Networking Only** (Network only, powered by AWS Fargate)
+- **EC2 Linux + Networking** (EC2 Linux + Networks)
+- **EC2 Windows + Networking** (EC2 Windows + Networks)
+
+![Amazon ECS Clusters options](images/ecs-cluster-options.png)
+
+### Kubernetes
+**Kubernetes** is an open source software for **container orchestration**.
+
+It enables to deploy and manage containerized applications at scale.
+
+Kubernetes manages a **cluster** of compute instances (called **nodes**).
+It runs containers within the cluster.
+
+Containers run in logical groupings called **pods**. You can run one or multiple containers together as a pod.
+
+Each pod is assigned an IP address and a unique Domain Name System (DNS), which Kubernetes uses to connect its service to each other and external traffic.
+
+![Kubernetes definition](images/kubernetes.png)
+
+### Amazon Elastic Kubernetes Service (Amazon EKS)
+
+### Amazon Elastic Container Registry (Amazon ECR)
