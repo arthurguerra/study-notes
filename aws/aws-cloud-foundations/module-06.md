@@ -247,3 +247,9 @@ Then, we need to **configure** the function:
 - Optionally, we can specify environment variables, timeouts, specifics VPCs, tags and other settings.
 
 All these settings are placed in a lambda deployment package, which is a zip archive that contains the function code and dependecies.
+
+## AWS Elastic Beanstalk
+**Elastic Beanstalk** provides an easy way to get web application up and running in the AWS Cloud.
+
+![AWS Elastic Beanstalk](images/elastic-beanstalk.png)
+
