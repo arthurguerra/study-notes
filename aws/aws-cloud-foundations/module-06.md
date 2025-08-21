@@ -203,3 +203,47 @@ Each pod is assigned an IP address and a unique Domain Name System (DNS), which 
 ### Amazon Elastic Kubernetes Service (Amazon EKS)
 
 ### Amazon Elastic Container Registry (Amazon ECR)
+
+## AWS Lambda
+Serverless computing is an approach that does not require provisioning or managing servers.
+
+**AWS Lambda** is an event driven **serverless compute** service.
+It enables us to run code without provisioning or managing servers.
+
+We create a **lambda function**, which is a AWS resource that contains the code we want to run.
+Then, we trigger the lambda function, either on a schedule or in response to an event.
+The code only runs when it is triggered.
+
+![AWS Lambda](images/aws-lambda.png)
+
+- Lambda supports **multiple programming languages**.
+
+- Lambda **completely automates the administration**, managing the infrastructure to run your code.
+
+- Lambda provides **built-in fault tolerance**. It mantains compute capacity across multiple avaliability zones.
+
+- We can **orchestrate multiple lambda functions** for complex or long running tasks by building workflows with AWS Step Functions.
+
+- Finally, with Lambda we **pay only for the requests that are served at the compute time that is required to run our code**.
+
+### Event sources
+Lambda functions are triggered by **event sources**.
+
+An event source can be an AWS service or a developer created application that produces events that trigger the AWS Lambda function to run.
+
+Some services, such as Amazon S3 and Amazon CloudWatch events, publish events to Lambda by **invoking the lambda function directly**.
+
+Other services are **polled** by Lambda.
+
+When creating a **Lambda function** we need to take some steps:
+- First step is to give it a **name**.
+- Then, we specify the **runtime environment**.
+- Specify an **execution role** used to grand IAM permissions to the function so it can interact with other AWS services.
+
+Then, we need to **configure** the function:
+- Add a **trigger** which is where we specify an available event source
+- Add **function code** using the code editor or uploading a file that contains the code.
+- Specify the **memory** in MB to allocate to the function
+- Optionally, we can specify environment variables, timeouts, specifics VPCs, tags and other settings.
+
+All these settings are placed in a lambda deployment package, which is a zip archive that contains the function code and dependecies.
