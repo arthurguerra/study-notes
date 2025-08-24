@@ -62,3 +62,22 @@ Amazon S3 includes event notifications that can be used to trigger other process
 It is implemented as a shared file system that uses the Network File System (NFS)
 
 ![Amazon EFS Implementation](images/efs-implementation.png)
+
+## Amazon S3 Glacier
+Amazon S3 Glacier is a secure, durable and low cost cloud storage service for data archiving and long term backup.
+
+Data stored in Glacier can take several hours to retrieve. That's why it works well for archiving.
+
+- **Archive**: any object stored in Amazon S3 Glacier.
+- **Vault**: container for storing archives.
+- **Vault Access Policy**: determines who can and can not access the data stored in the volume.
+
+There are three options for retrieving data 
+
+- **Expedited** retrievals are typically made available within 1 to 5 minutes and have the highest cost
+- **Standard** retrievals typically complete within 3 to 5 hours and are less expensive than expedited.
+- **Bulk** retrievals typically complete within 5 to 12 hours and are the least expensive.
+
+### Lifecycle Policy
+
+![Licecycle Policy](images/s3-lifecycle-policy.png)
