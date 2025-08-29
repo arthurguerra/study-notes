@@ -30,3 +30,18 @@ Elastic Load Balancing use cases
 **Amazon CloudWatch** is a **monitoring** and **observability** service. It monitors our AWS resources and the applications running on AWS in real time.
 
 ![Amazon CloudWatch](images/amazon-cloudwatch.png)
+
+## Amazon EC2 Auto Scaling
+Scaling is the hability to increase or decrease the compute capacity of our application.
+
+**Amazon EC2 Auto Scaling** is an AWS service that helps maintain application availability and enables to **automatically add or remove EC2 instaces** according to specific conditions that can be defined.
+
+![Amazon EC2 Auto Scaling](image/ec2-auto-scaling.png)
+
+An **Auto Scaling Group** is a collection of Amazon EC2 instances that are treated as a logical grouping. 
+
+![Auto Scaling Group](images/auto-scaling-group.png)
+
+To launch EC2 instances, a Auto Scaling Group uses a **launch configurations** which is an instance configuration template.
+
+![Launch Configurations](images/launch-configurations.png)
